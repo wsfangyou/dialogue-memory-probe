@@ -1,0 +1,398 @@
+{
+ "recall": 0.5,
+ "recall_primary": 1.0,
+ "precision": 0.9091,
+ "anchor_rate": 1.0,
+ "n_items": 22,
+ "n_gold": 40,
+ "best_layer": "L0",
+ "by_layer": {
+  "L0": {
+   "acc_top1": 1.0,
+   "margin": 0.1415,
+   "miss": []
+  },
+  "L18": {
+   "acc_top1": 0.2,
+   "margin": -0.0002,
+   "miss": [
+    "D01",
+    "D04",
+    "D06",
+    "D07",
+    "D08",
+    "D09",
+    "D10",
+    "D11",
+    "D12",
+    "D13",
+    "D15",
+    "D16",
+    "D17",
+    "D18",
+    "D19",
+    "D20"
+   ]
+  },
+  "L36": {
+   "acc_top1": 0.1,
+   "margin": -0.0566,
+   "miss": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05",
+    "D07",
+    "D08",
+    "D09",
+    "D10",
+    "D11",
+    "D12",
+    "D13",
+    "D14",
+    "D15",
+    "D16",
+    "D17",
+    "D19",
+    "D20"
+   ]
+  }
+ },
+ "per_sample": [
+  {
+   "id": "D01",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "星轨",
+     "dimension": "数据库选型",
+     "value": "PostgreSQL 14 单主加流复制",
+     "kind": "decision",
+     "raw": "{\"entity\": \"星轨\", \"dimension\": \"数据库选型\", \"value\": \"PostgreSQL 14 单主加流复制\", \"kind\": \"decision\"}"
+    }
+   ]
+  },
+  {
+   "id": "D02",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "潮汐",
+     "dimension": "消息队列",
+     "value": "RocketMQ",
+     "kind": "decision",
+     "raw": "{\"entity\": \"潮汐\", \"dimension\": \"消息队列\", \"value\": \"RocketMQ\", \"kind\": \"decision\"}"
+    }
+   ]
+  },
+  {
+   "id": "D03",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "长风",
+     "dimension": "存储引擎",
+     "value": "ClickHouse",
+     "kind": "decision",
+     "raw": "{\"entity\": \"长风\", \"dimension\": \"存储引擎\", \"value\": \"ClickHouse\", \"kind\": \"decision\"}"
+    }
+   ]
+  },
+  {
+   "id": "D04",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "青梧",
+     "dimension": "缓存层",
+     "value": "Redis Cluster 三主三从",
+     "kind": "decision",
+     "raw": "{\"entity\": \"青梧\", \"dimension\": \"缓存层\", \"value\": \"Redis Cluster 三主三从\", \"kind\": \"decision\"}"
+    }
+   ]
+  },
+  {
+   "id": "D05",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "落霞",
+     "dimension": "金额精度",
+     "value": "BIGINT 存分",
+     "kind": "decision",
+     "raw": "{\"entity\": \"落霞\", \"dimension\": \"金额精度\", \"value\": \"BIGINT 存分\", \"kind\": \"decision\"}"
+    }
+   ]
+  },
+  {
+   "id": "D06",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 2,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "白鹭",
+     "dimension": "上报策略",
+     "value": "批量攒够 20 条或 30 秒强制上报",
+     "kind": "decision",
+     "raw": "{\"entity\": \"白鹭\", \"dimension\": \"上报策略\", \"value\": \"批量攒够 20 条或 30 秒强制上报\", \"kind\": \"decision\"}"
+    },
+    {
+     "entity": "白鹭",
+     "dimension": "上报策略",
+     "value": "App 退到后台必须立刻 flush",
+     "kind": "decision",
+     "raw": "{\"entity\": \"白鹭\", \"dimension\": \"上报策略\", \"value\": \"App 退到后台必须立刻 flush\", \"kind\": \"decision\"}"
+    }
+   ]
+  },
+  {
+   "id": "D07",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "寒山",
+     "dimension": "文件存储",
+     "value": "MinIO 私有化部署",
+     "kind": "decision",
+     "raw": "{\"entity\": \"寒山\", \"dimension\": \"文件存储\", \"value\": \"MinIO 私有化部署\", \"kind\": \"decision\"}"
+    }
+   ]
+  },
+  {
+   "id": "D08",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "南乔",
+     "dimension": "模型部署",
+     "value": "本地 vLLM 起 Qwen 系列",
+     "kind": "decision",
+     "raw": "{\"entity\": \"南乔\", \"dimension\": \"模型部署\", \"value\": \"本地 vLLM 起 Qwen 系列\", \"kind\": \"decision\"}"
+    }
+   ]
+  },
+  {
+   "id": "D09",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "北辰",
+     "dimension": "前端框架",
+     "value": "Vue 3 加 Vite",
+     "kind": "decision",
+     "raw": "{\"entity\": \"北辰\", \"dimension\": \"前端框架\", \"value\": \"Vue 3 加 Vite\", \"kind\": \"decision\"}"
+    }
+   ]
+  },
+  {
+   "id": "D10",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "望舒",
+     "dimension": "调度器",
+     "value": "XXL-JOB",
+     "kind": "decision",
+     "raw": "{\"entity\": \"望舒\", \"dimension\": \"调度器\", \"value\": \"XXL-JOB\", \"kind\": \"decision\"}"
+    }
+   ]
+  },
+  {
+   "id": "D11",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "云梦",
+     "dimension": "推流协议",
+     "value": "RTMP 推流加 HTTP-FLV 播放",
+     "kind": "decision",
+     "raw": "{\"entity\": \"云梦\", \"dimension\": \"推流协议\", \"value\": \"RTMP 推流加 HTTP-FLV 播放\", \"kind\": \"decision\"}"
+    }
+   ]
+  },
+  {
+   "id": "D12",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "子衿",
+     "dimension": "接口对接方案",
+     "value": "EDI 标准报文加 SFTP",
+     "kind": "decision",
+     "raw": "{\"entity\": \"子衿\", \"dimension\": \"接口对接方案\", \"value\": \"EDI 标准报文加 SFTP\", \"kind\": \"decision\"}"
+    }
+   ]
+  },
+  {
+   "id": "D13",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "清和",
+     "dimension": "影像格式",
+     "value": "DICOM 原格式加 JPEG2000 压缩",
+     "kind": "decision",
+     "raw": "{\"entity\": \"清和\", \"dimension\": \"影像格式\", \"value\": \"DICOM 原格式加 JPEG2000 压缩\", \"kind\": \"decision\"}"
+    }
+   ]
+  },
+  {
+   "id": "D14",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "松风",
+     "dimension": "审批流引擎",
+     "value": "Flowable",
+     "kind": "decision",
+     "raw": "{\"entity\": \"松风\", \"dimension\": \"审批流引擎\", \"value\": \"Flowable\", \"kind\": \"decision\"}"
+    }
+   ]
+  },
+  {
+   "id": "D15",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "既明",
+     "dimension": "通信协议",
+     "value": "MQTT 3.1.1",
+     "kind": "decision",
+     "raw": "{\"entity\": \"既明\", \"dimension\": \"通信协议\", \"value\": \"MQTT 3.1.1\", \"kind\": \"decision\"}"
+    }
+   ]
+  },
+  {
+   "id": "D16",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "疏影",
+     "dimension": "一致性方案",
+     "value": "本地消息表加定时补偿",
+     "kind": "decision",
+     "raw": "{\"entity\": \"疏影\", \"dimension\": \"一致性方案\", \"value\": \"本地消息表加定时补偿\", \"kind\": \"decision\"}"
+    }
+   ]
+  },
+  {
+   "id": "D17",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 2,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "沧溟",
+     "dimension": "汇率拉取频率",
+     "value": "每小时",
+     "kind": "decision",
+     "raw": "{\"entity\": \"沧溟\", \"dimension\": \"汇率拉取频率\", \"value\": \"每小时\", \"kind\": \"decision\"}"
+    },
+    {
+     "entity": "沧溟",
+     "dimension": "汇率告警阈值",
+     "value": "千分之五",
+     "kind": "decision",
+     "raw": "{\"entity\": \"沧溟\", \"dimension\": \"汇率告警阈值\", \"value\": \"千分之五\", \"kind\": \"decision\"}"
+    }
+   ]
+  },
+  {
+   "id": "D18",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "怀瑾",
+     "dimension": "数据脱敏",
+     "value": "身份证和手机号在入库前加密",
+     "kind": "fact",
+     "raw": "{\"entity\": \"怀瑾\", \"dimension\": \"数据脱敏\", \"value\": \"身份证和手机号在入库前加密\", \"kind\": \"fact\"}"
+    }
+   ]
+  },
+  {
+   "id": "D19",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "映月",
+     "dimension": "转码方案",
+     "value": "GPU 硬编 H.264",
+     "kind": "decision",
+     "raw": "{\"entity\": \"映月\", \"dimension\": \"转码方案\", \"value\": \"GPU 硬编 H.264\", \"kind\": \"decision\"}"
+    }
+   ]
+  },
+  {
+   "id": "D20",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "振鹭",
+     "dimension": "路径规划",
+     "value": "S 形蛇形拣货",
+     "kind": "decision",
+     "raw": "{\"entity\": \"振鹭\", \"dimension\": \"路径规划\", \"value\": \"S 形蛇形拣货\", \"kind\": \"decision\"}"
+    }
+   ]
+  }
+ ]
+}

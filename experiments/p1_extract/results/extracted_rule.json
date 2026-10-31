@@ -1,0 +1,242 @@
+[
+ {
+  "id": "D01",
+  "items": [
+   {
+    "entity": "星轨",
+    "dimension": "数据库选型",
+    "value": "PostgreSQL 14 单主加流复制",
+    "kind": "decision",
+    "raw": ""
+   }
+  ]
+ },
+ {
+  "id": "D02",
+  "items": [
+   {
+    "entity": "",
+    "dimension": "就是",
+    "value": "RocketMQ",
+    "kind": "decision",
+    "raw": ""
+   }
+  ]
+ },
+ {
+  "id": "D03",
+  "items": [
+   {
+    "entity": "",
+    "dimension": "长风",
+    "value": "ClickHouse",
+    "kind": "decision",
+    "raw": ""
+   }
+  ]
+ },
+ {
+  "id": "D04",
+  "items": [
+   {
+    "entity": "青梧",
+    "dimension": "缓存层",
+    "value": "Redis Cluster 三主三从",
+    "kind": "decision",
+    "raw": ""
+   }
+  ]
+ },
+ {
+  "id": "D05",
+  "items": [
+   {
+    "entity": "",
+    "dimension": "落霞",
+    "value": "全链路用 BIGINT 存分",
+    "kind": "decision",
+    "raw": ""
+   }
+  ]
+ },
+ {
+  "id": "D06",
+  "items": [
+   {
+    "entity": "白鹭",
+    "dimension": "上报策略",
+    "value": "实时上报太耗电，用户会卸载",
+    "kind": "decision",
+    "raw": ""
+   }
+  ]
+ },
+ {
+  "id": "D07",
+  "items": [
+   {
+    "entity": "",
+    "dimension": "就是",
+    "value": "MinIO 私有化部署",
+    "kind": "decision",
+    "raw": ""
+   }
+  ]
+ },
+ {
+  "id": "D08",
+  "items": [
+   {
+    "entity": "南乔",
+    "dimension": "模型部署",
+    "value": "本地 vLLM 起 Qwen 系列",
+    "kind": "decision",
+    "raw": ""
+   }
+  ]
+ },
+ {
+  "id": "D09",
+  "items": [
+   {
+    "entity": "",
+    "dimension": "北辰",
+    "value": "Vue 3 加 Vite",
+    "kind": "decision",
+    "raw": ""
+   }
+  ]
+ },
+ {
+  "id": "D10",
+  "items": [
+   {
+    "entity": "望舒",
+    "dimension": "调度器",
+    "value": "现成的有失败重试和告警",
+    "kind": "decision",
+    "raw": ""
+   }
+  ]
+ },
+ {
+  "id": "D11",
+  "items": [
+   {
+    "entity": "",
+    "dimension": "云梦",
+    "value": "WebRTC 要自建 SFU，成本翻倍",
+    "kind": "decision",
+    "raw": ""
+   }
+  ]
+ },
+ {
+  "id": "D12",
+  "items": [
+   {
+    "entity": "",
+    "dimension": "子衿",
+    "value": "对方是老牌制造企业，只有 EDI 通道",
+    "kind": "decision",
+    "raw": ""
+   }
+  ]
+ },
+ {
+  "id": "D13",
+  "items": [
+   {
+    "entity": "清和",
+    "dimension": "影像格式",
+    "value": "DICOM 原格式加 JPEG2000 压缩",
+    "kind": "decision",
+    "raw": ""
+   }
+  ]
+ },
+ {
+  "id": "D14",
+  "items": [
+   {
+    "entity": "",
+    "dimension": "",
+    "value": "报销规则每个季度都变",
+    "kind": "decision",
+    "raw": ""
+   }
+  ]
+ },
+ {
+  "id": "D15",
+  "items": [
+   {
+    "entity": "",
+    "dimension": "",
+    "value": "设备三万台，HTTP 轮询把服务打挂过",
+    "kind": "decision",
+    "raw": ""
+   }
+  ]
+ },
+ {
+  "id": "D16",
+  "items": [
+   {
+    "entity": "",
+    "dimension": "疏影",
+    "value": "本地消息表加定时补偿",
+    "kind": "decision",
+    "raw": ""
+   }
+  ]
+ },
+ {
+  "id": "D17",
+  "items": [
+   {
+    "entity": "",
+    "dimension": "",
+    "value": "实时接口有 QPS 限制",
+    "kind": "decision",
+    "raw": ""
+   }
+  ]
+ },
+ {
+  "id": "D18",
+  "items": [
+   {
+    "entity": "",
+    "dimension": "怀瑾",
+    "value": "入库前加密可以避免 DBA 看到明文",
+    "kind": "decision",
+    "raw": ""
+   }
+  ]
+ },
+ {
+  "id": "D19",
+  "items": [
+   {
+    "entity": "",
+    "dimension": "映月",
+    "value": "GPU 硬编 H.264",
+    "kind": "decision",
+    "raw": ""
+   }
+  ]
+ },
+ {
+  "id": "D20",
+  "items": [
+   {
+    "entity": "",
+    "dimension": "",
+    "value": "货位是固定分区，蛇形已经接近最优",
+    "kind": "decision",
+    "raw": ""
+   }
+  ]
+ }
+]

@@ -1,0 +1,25 @@
+# 缓存的表示张量（约 360 MB，可由脚本重新生成）
+experiments/**/results/reps/
+experiments/**/results/reps_bb/
+*.npz
+
+# 本地备份
+backup/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+env/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 模型权重与本地产物
+*.safetensors
+*.bin
+*.gguf

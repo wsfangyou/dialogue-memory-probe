@@ -1,0 +1,1057 @@
+{
+ "seed": 20261101,
+ "samples": [
+  {
+   "id": "D01",
+   "turns": [
+    {
+     "role": "user",
+     "content": "那个星轨的项目，数据库选型这块最后是怎么定的来着？"
+    },
+    {
+     "role": "assistant",
+     "content": "最终定的是PostgreSQL 14 单主加流复制。当时考虑过MongoDB，但事务支持太弱，报表聚合写不动，所以没走那条。另外明年二季度要上分库分表，得提前留好 shard key。"
+    },
+    {
+     "role": "user",
+     "content": "午饭吃了没？"
+    },
+    {
+     "role": "assistant",
+     "content": "不着急，你先忙。"
+    },
+    {
+     "role": "user",
+     "content": "好，我知道了。"
+    },
+    {
+     "role": "user",
+     "content": "顺便问一下，今天下午那个会改到几点了？"
+    },
+    {
+     "role": "assistant",
+     "content": "是的，就这些。"
+    }
+   ],
+   "gold": [
+    {
+     "entity": "星轨",
+     "dimension": "数据库选型",
+     "value": "PostgreSQL 14 单主加流复制",
+     "kind": "decision"
+    },
+    {
+     "entity": "星轨",
+     "dimension": "技术选型排除项",
+     "value": "未采用 MongoDB，因为事务支持太弱，报表聚合写不动",
+     "kind": "fact"
+    }
+   ],
+   "query": "星轨那个数据平台的数据库最后到底用的哪个？",
+   "answer": "PostgreSQL"
+  },
+  {
+   "id": "D02",
+   "turns": [
+    {
+     "role": "user",
+     "content": "潮汐那边的消息队列，我们当时是选了哪个？"
+    },
+    {
+     "role": "assistant",
+     "content": "是RocketMQ。一开始的备选是Kafka，评估下来需要事务消息，工单状态不能丢，就换成RocketMQ了。要留意的点是消费端必须幂等，重复投递要能扛。"
+    },
+    {
+     "role": "user",
+     "content": "先这样吧，我这边还有个会。"
+    },
+    {
+     "role": "assistant",
+     "content": "吃了，你呢。"
+    },
+    {
+     "role": "user",
+     "content": "对，就是这个。"
+    },
+    {
+     "role": "user",
+     "content": "对了，你昨天说的那个文档我看了，还行。"
+    },
+    {
+     "role": "user",
+     "content": "午饭吃了没？"
+    },
+    {
+     "role": "assistant",
+     "content": "不着急，你先忙。"
+    },
+    {
+     "role": "assistant",
+     "content": "我看一下日程，应该是改到四点了。"
+    }
+   ],
+   "gold": [
+    {
+     "entity": "潮汐",
+     "dimension": "消息队列",
+     "value": "RocketMQ",
+     "kind": "decision"
+    },
+    {
+     "entity": "潮汐",
+     "dimension": "技术选型排除项",
+     "value": "未采用 Kafka，因为需要事务消息，工单状态不能丢",
+     "kind": "fact"
+    }
+   ],
+   "query": "潮汐的工单系统消息队列选的是哪个？",
+   "answer": "RocketMQ"
+  },
+  {
+   "id": "D03",
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我回忆下，长风这个项目存储引擎用的什么方案？"
+    },
+    {
+     "role": "assistant",
+     "content": "最终定的是ClickHouse。当时考虑过Elasticsearch，但聚合查询快十倍，磁盘还省一半，所以没走那条。另外不支持频繁更新，得走批量导入。"
+    },
+    {
+     "role": "user",
+     "content": "行，那就这样。"
+    },
+    {
+     "role": "user",
+     "content": "刚才说到哪了，哦对。"
+    },
+    {
+     "role": "user",
+     "content": "这个不着急，下周再说也行。"
+    },
+    {
+     "role": "assistant",
+     "content": "那个文档我这边没收到，回头再发你一次。"
+    },
+    {
+     "role": "assistant",
+     "content": "是的，就这些。"
+    }
+   ],
+   "gold": [
+    {
+     "entity": "长风",
+     "dimension": "存储引擎",
+     "value": "ClickHouse",
+     "kind": "decision"
+    },
+    {
+     "entity": "长风",
+     "dimension": "技术选型排除项",
+     "value": "未采用 Elasticsearch，因为聚合查询快十倍，磁盘还省一半",
+     "kind": "fact"
+    }
+   ],
+   "query": "长风那个日志分析用的什么存储？",
+   "answer": "ClickHouse"
+  },
+  {
+   "id": "D04",
+   "turns": [
+    {
+     "role": "user",
+     "content": "那个青梧的项目，缓存层这块最后是怎么定的来着？"
+    },
+    {
+     "role": "assistant",
+     "content": "最终定的是Redis Cluster 三主三从。当时考虑过本地 Caffeine，但推荐结果要在多个实例间共享，所以没走那条。另外热点 key 要做本地二级缓存。"
+    },
+    {
+     "role": "user",
+     "content": "等一下我先接个电话。"
+    },
+    {
+     "role": "assistant",
+     "content": "行，下周再对一次。"
+    },
+    {
+     "role": "user",
+     "content": "对了，你昨天说的那个文档我看了，还行。"
+    },
+    {
+     "role": "assistant",
+     "content": "是的，就这些。"
+    },
+    {
+     "role": "user",
+     "content": "先这样吧，我这边还有个会。"
+    },
+    {
+     "role": "assistant",
+     "content": "吃了，你呢。"
+    },
+    {
+     "role": "user",
+     "content": "行，那就这样。"
+    }
+   ],
+   "gold": [
+    {
+     "entity": "青梧",
+     "dimension": "缓存层",
+     "value": "Redis Cluster 三主三从",
+     "kind": "decision"
+    },
+    {
+     "entity": "青梧",
+     "dimension": "技术选型排除项",
+     "value": "未采用 本地 Caffeine，因为推荐结果要在多个实例间共享",
+     "kind": "fact"
+    }
+   ],
+   "query": "青梧的推荐服务缓存是怎么搭的？",
+   "answer": "Redis"
+  },
+  {
+   "id": "D05",
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我回忆下，落霞这个项目金额精度用的什么方案？"
+    },
+    {
+     "role": "assistant",
+     "content": "最终定的是全链路用 BIGINT 存分。当时考虑过DECIMAL，但Java 侧 BigDecimal 序列化坑太多，所以没走那条。另外所有除法必须显式指定舍入模式。"
+    },
+    {
+     "role": "user",
+     "content": "等一下我先接个电话。"
+    },
+    {
+     "role": "assistant",
+     "content": "吃了，你呢。"
+    },
+    {
+     "role": "user",
+     "content": "刚才说到哪了，哦对。"
+    },
+    {
+     "role": "assistant",
+     "content": "是的，就这些。"
+    },
+    {
+     "role": "user",
+     "content": "嗯，还有别的事吗？"
+    },
+    {
+     "role": "assistant",
+     "content": "我看一下日程，应该是改到四点了。"
+    },
+    {
+     "role": "user",
+     "content": "嗯，跟我记的一样。"
+    }
+   ],
+   "gold": [
+    {
+     "entity": "落霞",
+     "dimension": "金额精度",
+     "value": "全链路用 BIGINT 存分",
+     "kind": "decision"
+    },
+    {
+     "entity": "落霞",
+     "dimension": "技术选型排除项",
+     "value": "未采用 DECIMAL，因为Java 侧 BigDecimal 序列化坑太多",
+     "kind": "fact"
+    }
+   ],
+   "query": "落霞结算系统的金额是怎么存的？",
+   "answer": "BIGINT"
+  },
+  {
+   "id": "D06",
+   "turns": [
+    {
+     "role": "user",
+     "content": "那个白鹭的项目，上报策略这块最后是怎么定的来着？"
+    },
+    {
+     "role": "assistant",
+     "content": "批量攒够 20 条或 30 秒强制上报。没选每条实时上报的原因是实时上报太耗电，用户会卸载。还有一条：App 退到后台必须立刻 flush。"
+    },
+    {
+     "role": "user",
+     "content": "哦对，想起来了。"
+    },
+    {
+     "role": "user",
+     "content": "等一下我先接个电话。"
+    },
+    {
+     "role": "user",
+     "content": "这个不着急，下周再说也行。"
+    },
+    {
+     "role": "assistant",
+     "content": "那个文档我这边没收到，回头再发你一次。"
+    },
+    {
+     "role": "assistant",
+     "content": "吃了，你呢。"
+    }
+   ],
+   "gold": [
+    {
+     "entity": "白鹭",
+     "dimension": "上报策略",
+     "value": "批量攒够 20 条或 30 秒强制上报",
+     "kind": "decision"
+    },
+    {
+     "entity": "白鹭",
+     "dimension": "技术选型排除项",
+     "value": "未采用 每条实时上报，因为实时上报太耗电，用户会卸载",
+     "kind": "fact"
+    }
+   ],
+   "query": "白鹭埋点 SDK 的上报策略是什么？",
+   "answer": "20 条"
+  },
+  {
+   "id": "D07",
+   "turns": [
+    {
+     "role": "user",
+     "content": "寒山那边的文件存储，我们当时是选了哪个？"
+    },
+    {
+     "role": "assistant",
+     "content": "最终定的是MinIO 私有化部署。当时考虑过阿里云 OSS，但合同不能出内网，合规要求，所以没走那条。另外MinIO 要做四副本纠删码。"
+    },
+    {
+     "role": "user",
+     "content": "对，就是这个。"
+    },
+    {
+     "role": "user",
+     "content": "等一下我先接个电话。"
+    },
+    {
+     "role": "user",
+     "content": "刚才说到哪了，哦对。"
+    },
+    {
+     "role": "assistant",
+     "content": "是的，就这些。"
+    },
+    {
+     "role": "assistant",
+     "content": "好，那你先开会，有事随时说。"
+    }
+   ],
+   "gold": [
+    {
+     "entity": "寒山",
+     "dimension": "文件存储",
+     "value": "MinIO 私有化部署",
+     "kind": "decision"
+    },
+    {
+     "entity": "寒山",
+     "dimension": "技术选型排除项",
+     "value": "未采用 阿里云 OSS，因为合同不能出内网，合规要求",
+     "kind": "fact"
+    }
+   ],
+   "query": "寒山的合同文件存在哪里？",
+   "answer": "MinIO"
+  },
+  {
+   "id": "D08",
+   "turns": [
+    {
+     "role": "user",
+     "content": "那个南乔的项目，模型部署这块最后是怎么定的来着？"
+    },
+    {
+     "role": "assistant",
+     "content": "最终定的是本地 vLLM 起 Qwen 系列。当时考虑过调用公有云 API，但客服话术涉及用户隐私，不能出境，所以没走那条。另外显存不够时要降级到 4bit 量化。"
+    },
+    {
+     "role": "user",
+     "content": "行，那就这样。"
+    },
+    {
+     "role": "user",
+     "content": "先这样吧，我这边还有个会。"
+    },
+    {
+     "role": "user",
+     "content": "等一下我先接个电话。"
+    },
+    {
+     "role": "assistant",
+     "content": "不着急，你先忙。"
+    },
+    {
+     "role": "user",
+     "content": "刚才说到哪了，哦对。"
+    },
+    {
+     "role": "assistant",
+     "content": "好，那你先开会，有事随时说。"
+    },
+    {
+     "role": "assistant",
+     "content": "我看一下日程，应该是改到四点了。"
+    }
+   ],
+   "gold": [
+    {
+     "entity": "南乔",
+     "dimension": "模型部署",
+     "value": "本地 vLLM 起 Qwen 系列",
+     "kind": "decision"
+    },
+    {
+     "entity": "南乔",
+     "dimension": "技术选型排除项",
+     "value": "未采用 调用公有云 API，因为客服话术涉及用户隐私，不能出境",
+     "kind": "fact"
+    }
+   ],
+   "query": "南乔的客服机器人模型是怎么部署的？",
+   "answer": "vLLM"
+  },
+  {
+   "id": "D09",
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我回忆下，北辰这个项目前端框架用的什么方案？"
+    },
+    {
+     "role": "assistant",
+     "content": "最终定的是Vue 3 加 Vite。当时考虑过React，但团队三个人都是 Vue 出身，所以没走那条。另外老项目 jQuery 部分先做微前端隔离。"
+    },
+    {
+     "role": "user",
+     "content": "先这样吧，我这边还有个会。"
+    },
+    {
+     "role": "assistant",
+     "content": "是的，就这些。"
+    },
+    {
+     "role": "user",
+     "content": "对了，你昨天说的那个文档我看了，还行。"
+    },
+    {
+     "role": "assistant",
+     "content": "那个文档我这边没收到，回头再发你一次。"
+    },
+    {
+     "role": "user",
+     "content": "刚才说到哪了，哦对。"
+    },
+    {
+     "role": "assistant",
+     "content": "行，下周再对一次。"
+    },
+    {
+     "role": "user",
+     "content": "哦对，想起来了。"
+    }
+   ],
+   "gold": [
+    {
+     "entity": "北辰",
+     "dimension": "前端框架",
+     "value": "Vue 3 加 Vite",
+     "kind": "decision"
+    },
+    {
+     "entity": "北辰",
+     "dimension": "技术选型排除项",
+     "value": "未采用 React，因为团队三个人都是 Vue 出身",
+     "kind": "fact"
+    }
+   ],
+   "query": "北辰的设备管理后台前端用什么框架？",
+   "answer": "Vue"
+  },
+  {
+   "id": "D10",
+   "turns": [
+    {
+     "role": "user",
+     "content": "那个望舒的项目，调度器这块最后是怎么定的来着？"
+    },
+    {
+     "role": "assistant",
+     "content": "XXL-JOB。没选自研 Quartz 集群的原因是现成的有失败重试和告警。还有一条：任务必须支持分片广播。"
+    },
+    {
+     "role": "user",
+     "content": "先这样吧，我这边还有个会。"
+    },
+    {
+     "role": "assistant",
+     "content": "不着急，你先忙。"
+    },
+    {
+     "role": "user",
+     "content": "好，我知道了。"
+    },
+    {
+     "role": "user",
+     "content": "对了，你昨天说的那个文档我看了，还行。"
+    },
+    {
+     "role": "assistant",
+     "content": "好，那你先开会，有事随时说。"
+    }
+   ],
+   "gold": [
+    {
+     "entity": "望舒",
+     "dimension": "调度器",
+     "value": "XXL-JOB",
+     "kind": "decision"
+    },
+    {
+     "entity": "望舒",
+     "dimension": "技术选型排除项",
+     "value": "未采用 自研 Quartz 集群，因为现成的有失败重试和告警",
+     "kind": "fact"
+    }
+   ],
+   "query": "望舒的定时任务用的什么调度器？",
+   "answer": "XXL-JOB"
+  },
+  {
+   "id": "D11",
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我回忆下，云梦这个项目推流协议用的什么方案？"
+    },
+    {
+     "role": "assistant",
+     "content": "RTMP 推流加 HTTP-FLV 播放。没选WebRTC的原因是WebRTC 要自建 SFU，成本翻倍。还有一条：FLV 延迟在三秒左右。"
+    },
+    {
+     "role": "user",
+     "content": "这个不着急，下周再说也行。"
+    },
+    {
+     "role": "assistant",
+     "content": "不着急，你先忙。"
+    },
+    {
+     "role": "user",
+     "content": "顺便问一下，今天下午那个会改到几点了？"
+    },
+    {
+     "role": "assistant",
+     "content": "行，下周再对一次。"
+    },
+    {
+     "role": "user",
+     "content": "行，那就这样。"
+    }
+   ],
+   "gold": [
+    {
+     "entity": "云梦",
+     "dimension": "推流协议",
+     "value": "RTMP 推流加 HTTP-FLV 播放",
+     "kind": "decision"
+    },
+    {
+     "entity": "云梦",
+     "dimension": "技术选型排除项",
+     "value": "未采用 WebRTC，因为WebRTC 要自建 SFU，成本翻倍",
+     "kind": "fact"
+    }
+   ],
+   "query": "云梦直播的推流协议用的什么？",
+   "answer": "RTMP"
+  },
+  {
+   "id": "D12",
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我回忆下，子衿这个项目接口对接用的什么方案？"
+    },
+    {
+     "role": "assistant",
+     "content": "EDI 标准报文加 SFTP。没选RESTful API的原因是对方是老牌制造企业，只有 EDI 通道。还有一条：SFTP 目录要按日期分，文件名带批次号。"
+    },
+    {
+     "role": "user",
+     "content": "嗯，还有别的事吗？"
+    },
+    {
+     "role": "assistant",
+     "content": "好，那你先开会，有事随时说。"
+    },
+    {
+     "role": "user",
+     "content": "午饭吃了没？"
+    },
+    {
+     "role": "assistant",
+     "content": "是的，就这些。"
+    },
+    {
+     "role": "user",
+     "content": "这个不着急，下周再说也行。"
+    },
+    {
+     "role": "assistant",
+     "content": "吃了，你呢。"
+    },
+    {
+     "role": "user",
+     "content": "好，我知道了。"
+    }
+   ],
+   "gold": [
+    {
+     "entity": "子衿",
+     "dimension": "接口对接",
+     "value": "EDI 标准报文加 SFTP",
+     "kind": "decision"
+    },
+    {
+     "entity": "子衿",
+     "dimension": "技术选型排除项",
+     "value": "未采用 RESTful API，因为对方是老牌制造企业，只有 EDI 通道",
+     "kind": "fact"
+    }
+   ],
+   "query": "子衿和供应链那边是怎么对接的？",
+   "answer": "EDI"
+  },
+  {
+   "id": "D13",
+   "turns": [
+    {
+     "role": "user",
+     "content": "那个清和的项目，影像格式这块最后是怎么定的来着？"
+    },
+    {
+     "role": "assistant",
+     "content": "最终定的是DICOM 原格式加 JPEG2000 压缩。当时考虑过直接转 JPEG，但JPEG 是有损的，不能用于诊断，所以没走那条。另外归档必须保留原始 DICOM。"
+    },
+    {
+     "role": "user",
+     "content": "嗯，还有别的事吗？"
+    },
+    {
+     "role": "assistant",
+     "content": "吃了，你呢。"
+    },
+    {
+     "role": "user",
+     "content": "好，我知道了。"
+    },
+    {
+     "role": "user",
+     "content": "顺便问一下，今天下午那个会改到几点了？"
+    },
+    {
+     "role": "assistant",
+     "content": "我看一下日程，应该是改到四点了。"
+    }
+   ],
+   "gold": [
+    {
+     "entity": "清和",
+     "dimension": "影像格式",
+     "value": "DICOM 原格式加 JPEG2000 压缩",
+     "kind": "decision"
+    },
+    {
+     "entity": "清和",
+     "dimension": "技术选型排除项",
+     "value": "未采用 直接转 JPEG，因为JPEG 是有损的，不能用于诊断",
+     "kind": "fact"
+    }
+   ],
+   "query": "清和的影像归档用什么格式？",
+   "answer": "DICOM"
+  },
+  {
+   "id": "D14",
+   "turns": [
+    {
+     "role": "user",
+     "content": "松风那边的审批流引擎，我们当时是选了哪个？"
+    },
+    {
+     "role": "assistant",
+     "content": "Flowable。没选硬编码状态机的原因是报销规则每个季度都变。还有一条：流程定义要能热部署。"
+    },
+    {
+     "role": "user",
+     "content": "午饭吃了没？"
+    },
+    {
+     "role": "assistant",
+     "content": "是的，就这些。"
+    },
+    {
+     "role": "user",
+     "content": "顺便问一下，今天下午那个会改到几点了？"
+    },
+    {
+     "role": "assistant",
+     "content": "刚说到方案那块，你继续。"
+    },
+    {
+     "role": "user",
+     "content": "先这样吧，我这边还有个会。"
+    },
+    {
+     "role": "assistant",
+     "content": "那个文档我这边没收到，回头再发你一次。"
+    },
+    {
+     "role": "user",
+     "content": "好，我知道了。"
+    }
+   ],
+   "gold": [
+    {
+     "entity": "松风",
+     "dimension": "审批流引擎",
+     "value": "Flowable",
+     "kind": "decision"
+    },
+    {
+     "entity": "松风",
+     "dimension": "技术选型排除项",
+     "value": "未采用 硬编码状态机，因为报销规则每个季度都变",
+     "kind": "fact"
+    }
+   ],
+   "query": "松风的报销审批流用的哪个引擎？",
+   "answer": "Flowable"
+  },
+  {
+   "id": "D15",
+   "turns": [
+    {
+     "role": "user",
+     "content": "我想确认一下，既明的通信协议定下来了吗？"
+    },
+    {
+     "role": "assistant",
+     "content": "MQTT 3.1.1。没选HTTP 轮询的原因是设备三万台，HTTP 轮询把服务打挂过。还有一条：QoS 要用 1，QoS 2 会阻塞队列。"
+    },
+    {
+     "role": "user",
+     "content": "等一下我先接个电话。"
+    },
+    {
+     "role": "assistant",
+     "content": "我看一下日程，应该是改到四点了。"
+    },
+    {
+     "role": "user",
+     "content": "对了，你昨天说的那个文档我看了，还行。"
+    },
+    {
+     "role": "assistant",
+     "content": "那个文档我这边没收到，回头再发你一次。"
+    },
+    {
+     "role": "user",
+     "content": "好，我知道了。"
+    }
+   ],
+   "gold": [
+    {
+     "entity": "既明",
+     "dimension": "通信协议",
+     "value": "MQTT 3.1.1",
+     "kind": "decision"
+    },
+    {
+     "entity": "既明",
+     "dimension": "技术选型排除项",
+     "value": "未采用 HTTP 轮询，因为设备三万台，HTTP 轮询把服务打挂过",
+     "kind": "fact"
+    }
+   ],
+   "query": "既明的设备网关用什么协议？",
+   "answer": "MQTT"
+  },
+  {
+   "id": "D16",
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我回忆下，疏影这个项目一致性方案用的什么方案？"
+    },
+    {
+     "role": "assistant",
+     "content": "是本地消息表加定时补偿。一开始的备选是分布式事务框架，评估下来积分允许最终一致，上 Seata 太重，就换成本地消息表加定时补偿了。要留意的点是补偿任务要能人工干预。"
+    },
+    {
+     "role": "user",
+     "content": "等一下我先接个电话。"
+    },
+    {
+     "role": "assistant",
+     "content": "吃了，你呢。"
+    },
+    {
+     "role": "user",
+     "content": "行，那就这样。"
+    },
+    {
+     "role": "user",
+     "content": "午饭吃了没？"
+    },
+    {
+     "role": "assistant",
+     "content": "行，下周再对一次。"
+    }
+   ],
+   "gold": [
+    {
+     "entity": "疏影",
+     "dimension": "一致性方案",
+     "value": "本地消息表加定时补偿",
+     "kind": "decision"
+    },
+    {
+     "entity": "疏影",
+     "dimension": "技术选型排除项",
+     "value": "未采用 分布式事务框架，因为积分允许最终一致，上 Seata 太重",
+     "kind": "fact"
+    }
+   ],
+   "query": "疏影的积分系统用什么保证一致性？",
+   "answer": "本地消息表"
+  },
+  {
+   "id": "D17",
+   "turns": [
+    {
+     "role": "user",
+     "content": "我想确认一下，沧溟的汇率处理定下来了吗？"
+    },
+    {
+     "role": "assistant",
+     "content": "每小时拉取一次中间价并落库。没选实时查询第三方接口的原因是实时接口有 QPS 限制。还有一条：汇率变动超过千分之五要发告警。"
+    },
+    {
+     "role": "user",
+     "content": "刚才说到哪了，哦对。"
+    },
+    {
+     "role": "assistant",
+     "content": "那个文档我这边没收到，回头再发你一次。"
+    },
+    {
+     "role": "user",
+     "content": "这个不着急，下周再说也行。"
+    },
+    {
+     "role": "assistant",
+     "content": "行，下周再对一次。"
+    },
+    {
+     "role": "user",
+     "content": "哦对，想起来了。"
+    },
+    {
+     "role": "user",
+     "content": "先这样吧，我这边还有个会。"
+    },
+    {
+     "role": "assistant",
+     "content": "我看一下日程，应该是改到四点了。"
+    }
+   ],
+   "gold": [
+    {
+     "entity": "沧溟",
+     "dimension": "汇率处理",
+     "value": "每小时拉取一次中间价并落库",
+     "kind": "decision"
+    },
+    {
+     "entity": "沧溟",
+     "dimension": "技术选型排除项",
+     "value": "未采用 实时查询第三方接口，因为实时接口有 QPS 限制",
+     "kind": "fact"
+    }
+   ],
+   "query": "沧溟的汇率数据是怎么更新的？",
+   "answer": "每小时"
+  },
+  {
+   "id": "D18",
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我回忆下，怀瑾这个项目数据脱敏用的什么方案？"
+    },
+    {
+     "role": "assistant",
+     "content": "身份证和手机号在入库前加密。没选查询时脱敏的原因是入库前加密可以避免 DBA 看到明文。还有一条：加密后不能做模糊查询。"
+    },
+    {
+     "role": "user",
+     "content": "先这样吧，我这边还有个会。"
+    },
+    {
+     "role": "assistant",
+     "content": "刚说到方案那块，你继续。"
+    },
+    {
+     "role": "user",
+     "content": "哦对，想起来了。"
+    },
+    {
+     "role": "user",
+     "content": "等一下我先接个电话。"
+    },
+    {
+     "role": "assistant",
+     "content": "那个文档我这边没收到，回头再发你一次。"
+    }
+   ],
+   "gold": [
+    {
+     "entity": "怀瑾",
+     "dimension": "数据脱敏",
+     "value": "身份证和手机号在入库前加密",
+     "kind": "decision"
+    },
+    {
+     "entity": "怀瑾",
+     "dimension": "技术选型排除项",
+     "value": "未采用 查询时脱敏，因为入库前加密可以避免 DBA 看到明文",
+     "kind": "fact"
+    }
+   ],
+   "query": "怀瑾的人事档案敏感字段怎么处理？",
+   "answer": "入库前加密"
+  },
+  {
+   "id": "D19",
+   "turns": [
+    {
+     "role": "user",
+     "content": "帮我回忆下，映月这个项目转码方案用的什么方案？"
+    },
+    {
+     "role": "assistant",
+     "content": "是GPU 硬编 H.264。一开始的备选是CPU 软编 x264，评估下来一路 1080p 软编要吃掉八个核，就换成GPU 硬编 H.264了。要留意的点是硬编在同码率下画质略差。"
+    },
+    {
+     "role": "user",
+     "content": "好，我知道了。"
+    },
+    {
+     "role": "user",
+     "content": "先这样吧，我这边还有个会。"
+    },
+    {
+     "role": "user",
+     "content": "等一下我先接个电话。"
+    },
+    {
+     "role": "assistant",
+     "content": "是的，就这些。"
+    },
+    {
+     "role": "user",
+     "content": "午饭吃了没？"
+    },
+    {
+     "role": "assistant",
+     "content": "吃了，你呢。"
+    },
+    {
+     "role": "assistant",
+     "content": "行，下周再对一次。"
+    }
+   ],
+   "gold": [
+    {
+     "entity": "映月",
+     "dimension": "转码方案",
+     "value": "GPU 硬编 H.264",
+     "kind": "decision"
+    },
+    {
+     "entity": "映月",
+     "dimension": "技术选型排除项",
+     "value": "未采用 CPU 软编 x264，因为一路 1080p 软编要吃掉八个核",
+     "kind": "fact"
+    }
+   ],
+   "query": "映月的会议录制用什么转码？",
+   "answer": "GPU 硬编"
+  },
+  {
+   "id": "D20",
+   "turns": [
+    {
+     "role": "user",
+     "content": "振鹭那边的路径规划，我们当时是选了哪个？"
+    },
+    {
+     "role": "assistant",
+     "content": "S 形蛇形拣货。没选遗传算法优化的原因是货位是固定分区，蛇形已经接近最优。还有一条：临时插单要能立刻重排路径。"
+    },
+    {
+     "role": "user",
+     "content": "哦对，想起来了。"
+    },
+    {
+     "role": "user",
+     "content": "刚才说到哪了，哦对。"
+    },
+    {
+     "role": "user",
+     "content": "等一下我先接个电话。"
+    },
+    {
+     "role": "assistant",
+     "content": "刚说到方案那块，你继续。"
+    },
+    {
+     "role": "assistant",
+     "content": "吃了，你呢。"
+    }
+   ],
+   "gold": [
+    {
+     "entity": "振鹭",
+     "dimension": "路径规划",
+     "value": "S 形蛇形拣货",
+     "kind": "decision"
+    },
+    {
+     "entity": "振鹭",
+     "dimension": "技术选型排除项",
+     "value": "未采用 遗传算法优化，因为货位是固定分区，蛇形已经接近最优",
+     "kind": "fact"
+    }
+   ],
+   "query": "振鹭的拣货路径是怎么规划的？",
+   "answer": "蛇形"
+  }
+ ]
+}

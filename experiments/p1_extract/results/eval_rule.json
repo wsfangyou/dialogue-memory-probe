@@ -1,0 +1,398 @@
+{
+ "recall": 0.5,
+ "recall_primary": 0.55,
+ "precision": 1.0,
+ "anchor_rate": 0.3,
+ "n_items": 20,
+ "n_gold": 40,
+ "best_layer": "L0",
+ "by_layer": {
+  "L0": {
+   "acc_top1": 0.55,
+   "margin": 0.0084,
+   "miss": [
+    "D02",
+    "D03",
+    "D07",
+    "D09",
+    "D14",
+    "D15",
+    "D17",
+    "D19",
+    "D20"
+   ]
+  },
+  "L18": {
+   "acc_top1": 0.05,
+   "margin": -0.0003,
+   "miss": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05",
+    "D06",
+    "D07",
+    "D08",
+    "D09",
+    "D10",
+    "D11",
+    "D12",
+    "D13",
+    "D15",
+    "D16",
+    "D17",
+    "D18",
+    "D19",
+    "D20"
+   ]
+  },
+  "L36": {
+   "acc_top1": 0.05,
+   "margin": -0.1192,
+   "miss": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05",
+    "D06",
+    "D07",
+    "D08",
+    "D09",
+    "D11",
+    "D12",
+    "D13",
+    "D14",
+    "D15",
+    "D16",
+    "D17",
+    "D18",
+    "D19",
+    "D20"
+   ]
+  }
+ },
+ "per_sample": [
+  {
+   "id": "D01",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "星轨",
+     "dimension": "数据库选型",
+     "value": "PostgreSQL 14 单主加流复制",
+     "kind": "decision",
+     "raw": ""
+    }
+   ]
+  },
+  {
+   "id": "D02",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "",
+     "dimension": "就是",
+     "value": "RocketMQ",
+     "kind": "decision",
+     "raw": ""
+    }
+   ]
+  },
+  {
+   "id": "D03",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "",
+     "dimension": "长风",
+     "value": "ClickHouse",
+     "kind": "decision",
+     "raw": ""
+    }
+   ]
+  },
+  {
+   "id": "D04",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "青梧",
+     "dimension": "缓存层",
+     "value": "Redis Cluster 三主三从",
+     "kind": "decision",
+     "raw": ""
+    }
+   ]
+  },
+  {
+   "id": "D05",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "",
+     "dimension": "落霞",
+     "value": "全链路用 BIGINT 存分",
+     "kind": "decision",
+     "raw": ""
+    }
+   ]
+  },
+  {
+   "id": "D06",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "白鹭",
+     "dimension": "上报策略",
+     "value": "实时上报太耗电，用户会卸载",
+     "kind": "decision",
+     "raw": ""
+    }
+   ]
+  },
+  {
+   "id": "D07",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "",
+     "dimension": "就是",
+     "value": "MinIO 私有化部署",
+     "kind": "decision",
+     "raw": ""
+    }
+   ]
+  },
+  {
+   "id": "D08",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "南乔",
+     "dimension": "模型部署",
+     "value": "本地 vLLM 起 Qwen 系列",
+     "kind": "decision",
+     "raw": ""
+    }
+   ]
+  },
+  {
+   "id": "D09",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "",
+     "dimension": "北辰",
+     "value": "Vue 3 加 Vite",
+     "kind": "decision",
+     "raw": ""
+    }
+   ]
+  },
+  {
+   "id": "D10",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "望舒",
+     "dimension": "调度器",
+     "value": "现成的有失败重试和告警",
+     "kind": "decision",
+     "raw": ""
+    }
+   ]
+  },
+  {
+   "id": "D11",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "",
+     "dimension": "云梦",
+     "value": "WebRTC 要自建 SFU，成本翻倍",
+     "kind": "decision",
+     "raw": ""
+    }
+   ]
+  },
+  {
+   "id": "D12",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "",
+     "dimension": "子衿",
+     "value": "对方是老牌制造企业，只有 EDI 通道",
+     "kind": "decision",
+     "raw": ""
+    }
+   ]
+  },
+  {
+   "id": "D13",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "清和",
+     "dimension": "影像格式",
+     "value": "DICOM 原格式加 JPEG2000 压缩",
+     "kind": "decision",
+     "raw": ""
+    }
+   ]
+  },
+  {
+   "id": "D14",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "",
+     "dimension": "",
+     "value": "报销规则每个季度都变",
+     "kind": "decision",
+     "raw": ""
+    }
+   ]
+  },
+  {
+   "id": "D15",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "",
+     "dimension": "",
+     "value": "设备三万台，HTTP 轮询把服务打挂过",
+     "kind": "decision",
+     "raw": ""
+    }
+   ]
+  },
+  {
+   "id": "D16",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "",
+     "dimension": "疏影",
+     "value": "本地消息表加定时补偿",
+     "kind": "decision",
+     "raw": ""
+    }
+   ]
+  },
+  {
+   "id": "D17",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "",
+     "dimension": "",
+     "value": "实时接口有 QPS 限制",
+     "kind": "decision",
+     "raw": ""
+    }
+   ]
+  },
+  {
+   "id": "D18",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "",
+     "dimension": "怀瑾",
+     "value": "入库前加密可以避免 DBA 看到明文",
+     "kind": "decision",
+     "raw": ""
+    }
+   ]
+  },
+  {
+   "id": "D19",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "",
+     "dimension": "映月",
+     "value": "GPU 硬编 H.264",
+     "kind": "decision",
+     "raw": ""
+    }
+   ]
+  },
+  {
+   "id": "D20",
+   "n_gold": 2,
+   "gold_hit": 1,
+   "n_item": 1,
+   "n_useful": 1,
+   "items": [
+    {
+     "entity": "",
+     "dimension": "",
+     "value": "货位是固定分区，蛇形已经接近最优",
+     "kind": "decision",
+     "raw": ""
+    }
+   ]
+  }
+ ]
+}
